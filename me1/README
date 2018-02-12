@@ -1,0 +1,28 @@
+1. Getting command-line arguments
+  $ ./me1-1.sh
+  Usage: ./me1-1.sh <your-name>
+
+  $ ./me1-1.sh Anne
+  Hello Anne!
+
+2. Math expressions
+  $ ./me1-2.sh 10 2
+  SUM: 12
+  DIFF: 8
+  PROD: 20
+  QUO: 5
+
+3. Using system tools I + processing files in a directory
+  $ ./me1-3.sh /path/to/dir 100
+  Files with word count < 100:
+  myfile-99 (wc: 99) 
+
+4. Using system tools II
+  $ ./me1-4.sh 02/14/2018
+  02/14/2018 is a Wednesday
+
+5. Using system tools III 
+  $ ./me1-5.sh 02/14/2018
+  02/14/2018 is a Wednesday
+  2 days to go!
+
