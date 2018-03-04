@@ -5,19 +5,25 @@
 #include<unistd.h>
 #define NUM_THREADS 500
 
-int x  = 0;
+int x = 0;
+pthread_mutex_t mx;
 
 void *AddOne()
 {
     unsigned int i, j = 0;
-    int tmp;
+    int reg;
 
-    tmp = x;
+    pthread_mutex_lock(&mx);
+    reg = x;
+
+    // Introduce delay
     for (i=0; i<rand()*100; i++) {
         j++;
     }
 
-    x = tmp + 1;
+    reg = reg+1;
+    x = reg;
+    pthread_mutex_unlock(&mx);  
 
     pthread_exit(NULL);
 }
